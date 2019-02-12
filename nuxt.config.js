@@ -54,3 +54,13 @@ module.exports = {
     }
   }
 }
+
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/nuxt-error-page/'
+  }
+} : {}
+
+export default {
+  ...routerBase
+}
