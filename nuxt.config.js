@@ -1,5 +1,10 @@
 const pkg = require('./package')
 
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/nuxt-error-page/'
+  }
+} : {}
 
 module.exports = {
   mode: 'spa',
@@ -23,10 +28,11 @@ module.exports = {
   ** Customize the progress-bar color
   */
   loading: { color: '#fff' },
-
+  ...routerBase,
   /*
   ** Global CSS
   */
+
   css: [
   ],
 
@@ -53,14 +59,4 @@ module.exports = {
       
     }
   }
-}
-
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-  router: {
-    base: '/nuxt-error-page/'
-  }
-} : {}
-
-export default {
-  ...routerBase
 }
