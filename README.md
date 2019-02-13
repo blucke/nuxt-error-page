@@ -1,6 +1,12 @@
 # nuxt-error-page
 
-> Nuxt.js Error Page
+> Error Page with Nuxt.js
+### https://nuxt-error-page.herokuapp.com/
+
+## page-404-vue-router
+
+> Page 404 with Vue.js and vue-router
+#### https://merimadzc.github.io/page-404-vue-router/
 
 ## Build Setup
 
